@@ -1,9 +1,23 @@
-# README
+# HokieLot
 
-This is the [Flask](http://flask.pocoo.org/) [quick start](http://flask.pocoo.org/docs/1.0/quickstart/#a-minimal-application) example for [Render](https://render.com).
+## Installation
 
-The app in this repo is deployed at [https://flask.onrender.com](https://flask.onrender.com).
+Make sure your python version >= 3.11
 
-## Deployment
+Install the necessary dependencies
 
-Follow the guide at https://render.com/docs/deploy-flask.
+```bash
+pip install ultralytics opencv-python
+```
+
+To make predictions, run the following commands
+
+```bash
+python main.py
+```
+
+## Notes
+
+There are two modes currently, one is to use the webcam another is to use the pre-downloaded images from the `imgs` folder. Change the `filename` variable on top of the `main.py` and comment/uncomment the `webcamCapture()` function call to switch between these two modes.
+
+It should also output the number of cars/trucks it detects in the image in the terminal once it finished executing.
